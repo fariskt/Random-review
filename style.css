@@ -1,0 +1,87 @@
+*{
+margin: 0;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:rgb(19, 112, 129);
+}
+.container{
+    height: 480px;
+    width: 400px;
+    background-color: rgb(205, 234, 239);
+    margin: auto;
+    margin-top: 100px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px black;
+    
+}
+.title h2{
+    padding: 10px;
+    color: rgb(49, 48, 46);
+}
+.underline{
+    background-color: rgb(50, 134, 186);
+    height: 1px;
+    margin-left: 70px;
+    width: 250px
+}
+
+/* Article styling */
+
+article{
+    padding: 15px;
+    margin: 5px;
+}
+#person-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px black;
+}
+#author{
+    padding: 3px;
+}
+.reviews #job{
+    padding: 5px;
+    color: rgb(232, 151, 11);
+}
+.reviews #info{
+    color: rgb(89, 87, 85);
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    line-height: 1rem;
+    max-height: 4rem;
+    
+}   
+
+/* button container */
+.btn-container{
+    padding: 5px;
+    margin-top: 20px;
+}
+button{
+    cursor: pointer;
+}
+.btn-container button{
+    font-size: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(14, 161, 230);
+    
+}
+.random-btn{
+    background-color: rgb(89, 192, 210);
+    height: 30px;
+    color: rgb(21, 34, 46);
+    border-radius: 4px;
+    border: 1px solid black;
+    font-weight: 600;
+}
