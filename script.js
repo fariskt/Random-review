@@ -118,18 +118,14 @@ forwBtn.addEventListener("click", function () {
 });
 
 // for keyborad buttons
-addEventListener("keyup", function(ev){
-  if(ev.key == "ArrowRight"){
-    if(currentItems <=9){
+addEventListener("keydown", function(ev){
+  if(ev.key == "ArrowRight" && currentItems <= 9){
       currentItems++;
       showPerson(currentItems);
-    };
   }
-   else if(ev.key == "ArrowLeft"){
-    if(currentItems >=1){
+   else if(ev.key == "ArrowLeft" && currentItems >=1){
       currentItems--;
       showPerson(currentItems);
-    };
   }
     else if(ev.key == "Enter"){
       currentItems = Math.floor(Math.random() * reviews.length);
