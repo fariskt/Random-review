@@ -41,6 +41,41 @@ const reviews = [
     img: "https://media.architecturaldigest.com/photos/64af1925702c8d416df9ba7c/16:9/w_2560%2Cc_limit/GettyImages-1258889149.jpg",
     text: "Elon Reeve Musk is a business magnate and investor. Musk is the founder, chairman, CEO and chief technology officer of SpaceX; angel investor, CEO, product architect and former chairman of Tesla.",
   },
+  {
+    id: 6,
+    name: "Michael Jordan",
+    job: "American Bastket Ball Player",
+    img: "https://etimg.etb2bimg.com/photo/99593616.cms",
+    text: "Michael Jeffrey Jordan (born February 17, 1963), also known by his initials MJ, is an American former professional basketball player and businessman.",
+  },
+  {
+    id: 7,
+    name: "Shah Rukh Khan",
+    job: "Indian Actor",
+    img: "https://img.theweek.in/content/dam/week/magazine/theweek/leisure/images/2023/2/11/63-Shah-Rukh-Khan.jpg",
+    text: "Shah Rukh Khan, also known by the initialism SRK, is an Indian actor and film producer who works in Hindi films. Referred to in the media as the Baadshah of Bollywood and King Khan, he has appeared in more than 90 films.",
+  },
+  {
+    id: 8,
+    name: "Drake",
+    job: "Canadian Rapper",
+    img: "https://media1.popsugar-assets.com/files/thumbor/zan-t_Me63if8oqWYE9ENiPLlhA/0x224:2826x3050/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/02/11/894/n/1922398/87f6bb525e430e7bd44e40.22278576_/i/Drake.jpg",
+    text: "Aubrey Drake Graham is a Canadian rapper, singer, and songwriter. An influential figure in contemporary popular music, Drake has been credited for popularizing singing and R&B sensibilities in hip hop.",
+  },
+  {
+    id: 9,
+    name: "Dwayne Johnson",
+    job: "American Actor",
+    img: "https://media.architecturaldigest.com/photos/64af1925702c8d416df9ba7c/16:9/w_2560%2Cc_limit/GettyImages-1258889149.jpg",
+    text: "Dwayne Douglas Johnson, also known by his ring name the Rock, is an American actor, film producer, and retired professional wrestler.",
+   },
+  {
+    id: 10,
+    name: "Steve Jobs",
+    job: "American business magnate",
+    img: "https://cdn.vox-cdn.com/thumbor/yIoKynT0Jl-zE7yWwzmW2fy04xc=/0x0:706x644/1400x1400/filters:focal(353x322:354x323)/cdn.vox-cdn.com/uploads/chorus_asset/file/13874040/stevejobs.1419962539.png",
+    text: "Steven Paul Jobs was an American business magnate and inventor. He was the co-founder, chairman, and CEO of Apple; the chairman and majority shareholder of Pixar.",  
+  },
 ];
 
 //select
@@ -82,7 +117,28 @@ forwBtn.addEventListener("click", function () {
   showPerson(currentItems);
 });
 
-//ramdom person
+// for keyborad buttons
+addEventListener("keyup", function(ev){
+  if(ev.key == "ArrowRight"){
+    if(currentItems <=9){
+      currentItems++;
+      showPerson(currentItems);
+    };
+  }
+   else if(ev.key == "ArrowLeft"){
+    if(currentItems >=1){
+      currentItems--;
+      showPerson(currentItems);
+    };
+  }
+    else if(ev.key == "Enter"){
+      currentItems = Math.floor(Math.random() * reviews.length);
+      showPerson(currentItems);
+    };
+});
+
+
+//ramdom button
 
 randBTn.addEventListener("click", function () {
   currentItems = Math.floor(Math.random() * reviews.length);
